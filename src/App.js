@@ -227,7 +227,7 @@ function App() {
                   </div>
                 </nav>
                 <div id="img-container">
-                  <img src="animated.jpg" alt="animated" />
+                  <img src="animated.jpg" alt="animated" width={1024} height={1061} />
                 </div>
                 <div id="relative-text">
                   Creative mind, curious hands — I build ideas into experiences.

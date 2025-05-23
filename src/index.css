@@ -113,6 +113,7 @@ body {
 
 #img-container img {
   width: 60%;
+  height: auto;
 }
 
 #relative-text {

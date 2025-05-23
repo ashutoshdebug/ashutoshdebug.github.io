@@ -78,8 +78,7 @@ body {
   background-color: rgb(212, 212, 212);
   width: 80%;
   padding: 5vh 5vw 5vw 5vw;
-  border-radius: 30px;
-  height: 100%;
+  border-radius: 10px 10px;
 }
 
 #container-nav {

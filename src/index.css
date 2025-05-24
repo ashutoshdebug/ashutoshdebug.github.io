@@ -197,11 +197,20 @@ font-size: 1.5vw;
   font-size: 7vw;
 }
 
+hr {
+  background-color: white;
+  height: 1px;
+  width: 90%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 10vh;
+}
 footer {
   margin-top: 20vh;
   /* background-color: var(--white); */
   /* color: rgb(212, 212, 212); */
-  background-color: rgb(182, 180, 180);
+  /* background-color: rgb(182, 180, 180); */
 }
 
 #footer-section {
@@ -213,16 +222,16 @@ footer {
 
 #footer-first span:first-child {
   font-size: 2vw;
-  color: #000;
+  color: #ffffff;
   font-weight: bolder;
 }
 
 #footer-first span {
-  color: #000;
+  color: rgb(255, 255, 255)fff;
 }
 
 .rights {
-  color: #000;
+  color: #ffffff;
   margin-top: 5vh;
   display: flex;
   align-items: center;
@@ -235,11 +244,11 @@ footer {
 
 .navigation li a,
 .sociallinks a {
-  color: var(--black);
+  color: var(--white);
 }
 
 #footer-name {
-  color: #000;
+  color: #ffffff;
   /* float: right; */
   justify-content: flex-end;
   display: flex;
@@ -259,7 +268,7 @@ footer {
 .sociallinks li,
 .navigation li {
   margin: 2vh;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   width: 100px;
   border-radius: 3px;
 }
@@ -405,6 +414,10 @@ footer {
 
   .dismail a{
     font-size: 9vw;
+  }
+
+  footer {
+    margin-top: 5vh;
   }
 
   #footer-third {

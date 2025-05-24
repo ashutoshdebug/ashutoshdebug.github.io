@@ -317,6 +317,7 @@ function App() {
               </a>
             </div>
           </main>
+          <hr />
           <footer id="pageFooter">
             <div id="footer-section">
               <div id="footer-first">

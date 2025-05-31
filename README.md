@@ -31,6 +31,6 @@ This repository hosts the source code for my personal website, which showcases m
 # Author
 Website: https://ashutoshdebug.github.io
 
-GitHub: @ashutoshdebug
+GitHub: [@ashutoshdebug](https://github.com/ashutoshdebug/)
 
 Email: ashutoshkumart82@gmail.com

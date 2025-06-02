@@ -18,10 +18,13 @@ import { useRef } from "react";
 import VariableProximity from "./VariableProximity";
 import DecryptedText from "./DecryptedText";
 import { SmoothCursor } from "./SmoothCursor";
+import { Terminal, TypingAnimation, AnimatedSpan } from "./Terminal"; // ✅ Updated import path
 import "./App.css";
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(true);
+  const [loading, setLoading] = useState(true); // 🟡 Add this
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +35,16 @@ function App() {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+ useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true); // Start fade out animation
+      setTimeout(() => {
+        setLoading(false); // Actually hide it after animation
+      }, 1000); // Match duration of fadeOut animation
+    }, 4000); // Length of terminal animation
+    return () => clearTimeout(timer);
   }, []);
 
 
@@ -110,6 +123,19 @@ function App() {
       };
     }
   }, []);
+
+  
+  if (loading) {
+    return (
+      <div className={`center-terminal ${fadeOut ? "fade-out" : ""}`}>
+        <Terminal>
+          <TypingAnimation>Hello, world!</TypingAnimation>
+          <TypingAnimation delay={1000}>Yo! something is happening</TypingAnimation>
+          <AnimatedSpan delay={2500}>Lets GO!</AnimatedSpan>
+        </Terminal>
+      </div>
+    );
+  }
 
   return (
     <div id="smooth-wrapper" style={{cursor: "none"}}>

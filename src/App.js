@@ -124,16 +124,25 @@ function App() {
     }
   }, []);
 
+useEffect(() => {
+  const timer = setTimeout(() => {
+    const element = document.querySelector(".center-ter");
+    if (element) element.classList.add("terminalfadeout");
+  }, 4000);
+  return () => clearTimeout(timer);
+}, []);
+
+
   
   if (loading) {
-    return (
+    return ( <div className="center-ter">
       <div className={`center-terminal ${fadeOut ? "fade-out" : ""}`}>
         <Terminal>
           <TypingAnimation>Hello, world!</TypingAnimation>
           <TypingAnimation delay={1000}>Yo! something is happening</TypingAnimation>
           <AnimatedSpan delay={2500}>Lets GO!</AnimatedSpan>
         </Terminal>
-      </div>
+      </div></div>
     );
   }
 

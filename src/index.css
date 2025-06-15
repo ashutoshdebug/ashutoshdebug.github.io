@@ -273,6 +273,19 @@ footer {
   border-radius: 3px;
 }
 
+.terminalfadeout{
+  animation:teranima 2s ease-in-out forwards;
+}
+
+@keyframes teranima {
+  from {
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(-100%);
+  }
+}
+
 @media only screen and (max-width: 990px) {
   body {
     cursor: auto;

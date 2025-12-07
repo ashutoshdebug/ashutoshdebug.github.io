@@ -4,7 +4,7 @@ import CountdownTimer from "./components/CountdownTimer";
 
 function App() {
   return (
-    <div className="w-screen h-screen text-white">
+    <div className="w-screen h-screen text-white selection:bg-orange-500">
       <div className="h-full flex flex-col justify-center items-center gap-10">
         <div className="text-6xl text-center">CURRENTLY BUSY LEVELING UP ACADEMICALLY!</div>
         <div className="flex justify-center flex-col items-center">
